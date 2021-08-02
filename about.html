@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Top Filmes</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/e81bf69a19.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-
+        +0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+</head>
+
+<body>
+    <header>
+        <nav id="search" class="navbar bg-dark">
+            <input type="checkbox" id="check">
+            <label id="icon" for="check" class="menu"><i class="fas fa-bars"></i></label>
+            <div class="barra">
+                <nav class="nmenu">
+                    <a href="index.html" class="link">Trending Top</a>
+                    <a href="about.html" class="link">Sobre</a>
+                </nav>
+            </div>
+            <img src="image/top.gif" alt="" class="nav-logo d-inline-block align-text-top" id="nav">
+            <form id="search-bar">
+                <input type="text" v-model="search" placeholder="Procure por um título..." id="search" class="search">
+                <button type="button" v-on:click="get_search(search)" class="searchbtn"> <i class="fas fa-search"></i></button>
+            </form>
+        </nav>
+    </header>
+
+    <body>
+        <div style="padding-bottom: 100px;"></div>
+        <div class="about">
+            <h1>Um pouco sobre o Projeto</h1>
+            <br>
+            <p> Eu comecei o sem saber quase nada de JavaScript e muito menos sobre API, passei os primeiros dias apenas pesquisando sobre o assunto, eu ja sabia o basico de HTML e CSS então comecei fazendo a pagina inicial.</p><br>
+            <p> Inicialmente foi bem difícil entender como que funcionava a API pois eu achava que tinha que conectar como um banco de dados que eu já tinha feito antes e conectado com PHP, depois de analisar vários projetos eu entendi que era bem mais simples
+                e que era tudo feito pelo link com a api key.</p><br>
+            <p> Nas minhas primeiras tentativas fui fazendo tudo do zero, porém como não tenho um conhecimento muito vasto em JavaScript e vue acabava que a sintaxe estava sempre errada. Eu consegui fazer os cards clicaveis utilizando as imagens como botões
+                e assim abrindo um modal para passar as informções da API.</p><br>
+            <br>
+            <h1>Design</h1>
+            <br>
+            <p>Depois de ter conseguido conectar a API que era a minha meta inicial fui direto procurar alguns elementos do bootstrap para complementar meu projeto.</p>
+            <br>
+            <h2 style="text-align: center;">Paleta escolhida:</h2>
+            <p style="text-align: center;">#212529 - Blue Charcoal</p>
+            <p style="text-align: center;">#181C1F - Black Pearl</p>
+            <p style="text-align: center;">#292E33 - Bunker</p>
+            <p style="text-align: center;">#D5D8DB - Light grayish blue</p>
+            <br>
+        </div>
+        </div>
+    </body>
+
+    <footer>
+        <div id="footerdiv1">
+            <img style="height: 100px; margin-top: 50px; " src="image/top.gif">
+        </div>
+        <div id="footerdiv2">
+            <div id="card">
+                <div class="content">
+                    <h2 class="name">Lázaro Engel Fernandes </h2>
+                    <h4 class="emailtitle">E-mail Acadêmico</h4>
+                    <a class="email" href="mailto:lazarofernandes.sg020@academico.ifsul.edu.br">lazarofernandes.sg020@academico.ifsul.edu.br</a>
+                </div>
+                <div class="contact">
+                    <ul>
+                        <!-- <a class="contacticon" href=".." target="_blank">
+                            <i class="fab fa-linkedin"></i></a> -->
+                        <a class="contacticon" href="mailto:lazarofernandes240@gmail.com" target="_blank">
+                            <i class="far fa-envelope"></i></a>
+                        <a class="contacticon" href="tel:(051)996188588" target="_blank">
+                            <i class="fas fa-phone"></i></a>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+
+</html>
